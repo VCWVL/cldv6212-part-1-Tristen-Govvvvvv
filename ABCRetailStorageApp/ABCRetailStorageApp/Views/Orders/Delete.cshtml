@@ -1,0 +1,90 @@
+﻿@model ABCRetailStorageApp.Models.OrderEntity
+@{
+    Layout = "_Layout";
+}
+
+<div class="form-container">
+    <h2>Delete Order</h2>
+
+    <p>Are you sure you want to delete order <strong>@Model.RowKey</strong>?</p>
+
+    <form asp-action="DeletePost" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="RowKey" />
+
+        <button type="submit" class="btn-delete">Delete</button>
+        <a asp-action="Index" class="btn-cancel">Cancel</a>
+    </form>
+
+    <div class="watermark">
+        <img src="https://cdn1.iconfinder.com/data/icons/shopping-and-ecommerce-122/24/order_cancel_order_cancel_delete_canceled_remove-61-512.png" alt="Watermark" />
+    </div>
+</div>
+
+<style>
+    .form-container {
+        position: relative;
+        max-width: 500px;
+        margin: 4rem auto 3rem auto;
+        padding: 2rem;
+        background-color: #f8f9fa;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+        .form-container h2 {
+            font-size: 2rem;
+            color: #444740;
+            margin-bottom: 1.5rem;
+        }
+
+    p {
+        font-size: 1rem;
+        color: #636453;
+        margin-bottom: 2rem;
+    }
+
+    .btn-delete {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        background-color: #c0392b;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-right: 1rem;
+        transition: background-color 0.3s;
+    }
+
+        .btn-delete:hover {
+            background-color: #992d22;
+        }
+
+    .btn-cancel {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        background-color: #e8e5d1;
+        color: #444740;
+        border-radius: 8px;
+        transition: background-color 0.3s;
+    }
+
+        .btn-cancel:hover {
+            background-color: #d0cbb2;
+        }
+
+    .watermark {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        opacity: 0.08;
+        pointer-events: none;
+    }
+
+        .watermark img {
+            max-width: 300px;
+            height: auto;
+        }
+</style>

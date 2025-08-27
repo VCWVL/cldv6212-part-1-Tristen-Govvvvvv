@@ -1,0 +1,109 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ABCRetailStorageApp
+build_property.RootNamespace = ABCRetailStorageApp
+build_property.ProjectDir = C:\Users\lab_services_student\source\repos\ABCRetailStorageApp\ABCRetailStorageApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\lab_services_student\source\repos\ABCRetailStorageApp\ABCRetailStorageApp
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Blobs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvYnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Files/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Orders/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Orders/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Orders/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Orders/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Queues/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVldWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Tables/CreateCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXENyZWF0ZUN1c3RvbWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Tables/CreateProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXENyZWF0ZVByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Tables/Customers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXEN1c3RvbWVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Tables/DeleteCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXERlbGV0ZUN1c3RvbWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Tables/DeleteProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXERlbGV0ZVByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Tables/EditCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXEVkaXRDdXN0b21lci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Tables/EditProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXEVkaXRQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Tables/Products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXFByb2R1Y3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/source/repos/ABCRetailStorageApp/ABCRetailStorageApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-tg0kzv4zlx

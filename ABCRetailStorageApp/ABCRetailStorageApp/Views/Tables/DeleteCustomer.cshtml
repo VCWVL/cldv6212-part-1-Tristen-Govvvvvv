@@ -1,0 +1,99 @@
+﻿@model ABCRetailStorageApp.Models.CustomerEntity
+@{
+    Layout = "_Layout";
+}
+
+<div class="form-container">
+    <h2>Delete Customer</h2>
+
+    <p class="delete-text">
+        Are you sure you want to delete <strong>@Model.Name</strong>?
+    </p>
+
+    <form asp-action="DeleteCustomerPost" method="post">
+        <input type="hidden" asp-for="RowKey" />
+
+        <div class="button-group">
+            <button type="submit" class="btn-delete">Delete</button>
+            <a asp-action="Customers" class="btn-cancel">Cancel</a>
+        </div>
+    </form>
+
+    <div class="watermark">
+        <img src="https://tse1.explicit.bing.net/th/id/OIP.6lz1VF8x3swC2EHqFmenGAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Watermark" />
+    </div>
+</div>
+
+<style>
+    .form-container {
+        position: relative;
+        max-width: 500px;
+        margin: 5rem auto 3rem auto;
+        padding: 2rem;
+        background-color: #f8f9fa;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+        .form-container h2 {
+            color: #444740;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+    .delete-text {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        color: #636453;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .btn-delete {
+        padding: 0.75rem 1.5rem;
+        background-color: #d9534f;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .btn-delete:hover {
+            background-color: #c9302c;
+        }
+
+    .btn-cancel {
+        padding: 0.75rem 1.5rem;
+        background-color: #84735e;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+    }
+
+        .btn-cancel:hover {
+            background-color: #636453;
+        }
+
+    /* Watermark */
+    .watermark {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        opacity: 0.1;
+        pointer-events: none;
+    }
+
+        .watermark img {
+            max-width: 250px;
+            height: auto;
+        }
+</style>

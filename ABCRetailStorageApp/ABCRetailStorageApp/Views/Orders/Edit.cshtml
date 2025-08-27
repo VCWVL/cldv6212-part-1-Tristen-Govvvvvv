@@ -1,0 +1,138 @@
+﻿@model ABCRetailStorageApp.Models.OrderEntity
+@{
+    Layout = "_Layout";
+}
+
+<div class="form-container">
+    <h2>Edit Order</h2>
+
+    <form asp-action="Edit" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="RowKey" />
+
+        <div class="form-group">
+            <label>Customer</label>
+            <select asp-for="CustomerRowKey" asp-items="@(new SelectList((IEnumerable<ABCRetailStorageApp.Models.CustomerEntity>)ViewBag.Customers, "RowKey", "Name", Model.CustomerRowKey))">
+                <option value="">-- Select Customer --</option>
+            </select>
+            <span asp-validation-for="CustomerRowKey" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Product</label>
+            <select asp-for="ProductRowKey" asp-items="@(new SelectList((IEnumerable<ABCRetailStorageApp.Models.ProductEntity>)ViewBag.Products, "RowKey", "Name", Model.ProductRowKey))">
+                <option value="">-- Select Product --</option>
+            </select>
+            <span asp-validation-for="ProductRowKey" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Quantity"></label>
+            <input asp-for="Quantity" type="number" min="1" />
+            <span asp-validation-for="Quantity" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn-submit">Save Changes</button>
+        <a asp-action="Index" class="btn-cancel">Cancel</a>
+    </form>
+
+    <div class="watermark">
+        <img src="https://th.bing.com/th/id/R.ad58224272ac08cedfb1f4aa55db3f4a?rik=Vx%2bNiFDdS2w%2b5w&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2ficonsmind%2foutline%2f512%2fPen-icon.png&ehk=iqORM6SWraGnJDTOJ2RtCjndokVjOa7Krh4jFPIidpc%3d&risl=&pid=ImgRaw&r=0" alt="Watermark" />
+    </div>
+</div>
+
+<style>
+    .form-container {
+        position: relative;
+        max-width: 600px;
+        margin: 4rem auto 3rem auto;
+        padding: 2rem;
+        background-color: #f8f9fa;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+        .form-container h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #444740;
+            margin-bottom: 2rem;
+        }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+    }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #444740;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            transition: border 0.3s;
+        }
+
+            .form-group input:focus,
+            .form-group select:focus {
+                border-color: #84735e;
+                outline: none;
+            }
+
+    .btn-submit {
+        display: block;
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        background-color: #84735e;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-bottom: 1rem;
+        transition: background-color 0.3s;
+    }
+
+        .btn-submit:hover {
+            background-color: #636453;
+        }
+
+    .btn-cancel {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        background-color: #e8e5d1;
+        color: #444740;
+        border-radius: 8px;
+        text-align: center;
+        transition: background-color 0.3s;
+    }
+
+        .btn-cancel:hover {
+            background-color: #d0cbb2;
+        }
+
+    .watermark {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        opacity: 0.08;
+        pointer-events: none;
+    }
+
+        .watermark img {
+            max-width: 300px;
+            height: auto;
+        }
+</style>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

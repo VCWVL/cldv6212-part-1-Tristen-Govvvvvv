@@ -1,0 +1,81 @@
+﻿@model ABCRetailStorageApp.Models.ProductEntity
+@{
+    Layout = "_Layout";
+}
+
+<div class="form-container">
+    <h2>Delete Product</h2>
+
+    <p>Are you sure you want to delete <strong>@Model.Name</strong>?</p>
+
+    <form asp-action="DeleteProductPost" method="post">
+        <input type="hidden" asp-for="RowKey" />
+        <button type="submit" class="btn-delete">Delete</button>
+        <a asp-action="Products" class="btn-cancel">Cancel</a>
+    </form>
+
+    <div class="watermark">
+        <img src="https://cdn-icons-png.flaticon.com/512/152/152561.png" alt="Watermark" />
+    </div>
+</div>
+
+<style>
+    .form-container {
+        position: relative;
+        max-width: 600px;
+        margin: 5rem auto 3rem auto;
+        padding: 2rem;
+        background-color: #f8f9fa;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+        .form-container h2 {
+            color: #444740;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+    .btn-delete, .btn-cancel {
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+        margin: 0 0.5rem;
+        transition: background-color 0.3s;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-delete {
+        background-color: #d9534f;
+    }
+
+        .btn-delete:hover {
+            background-color: #b53b3b;
+        }
+
+    .btn-cancel {
+        background-color: #636453;
+    }
+
+        .btn-cancel:hover {
+            background-color: #444740;
+        }
+
+    /* Watermark */
+    .watermark {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        opacity: 0.08;
+        pointer-events: none;
+    }
+
+        .watermark img {
+            max-width: 300px;
+            height: auto;
+        }
+</style>

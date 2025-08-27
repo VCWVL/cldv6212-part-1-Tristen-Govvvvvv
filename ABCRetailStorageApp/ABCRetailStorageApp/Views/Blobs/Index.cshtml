@@ -1,0 +1,35 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "Blobs";
+}
+
+<h2>Blobs</h2>
+
+<form asp-action="Upload" enctype="multipart/form-data" method="post">
+    <input type="file" name="file" />
+    <button type="submit">Upload</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Blob Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var blobName in Model)
+        {
+            <tr>
+                <td>@blobName</td>
+                <td>
+                    <form asp-action="Delete" method="post">
+                        <input type="hidden" name="name" value="@blobName" />
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,87 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "Files";
+}
+
+<h2>Files</h2>
+
+<form asp-action="Upload" enctype="multipart/form-data" method="post">
+    <input type="file" name="file" />
+    <button type="submit">Upload</button>
+</form>
+
+<table class="file-table">
+    <thead>
+        <tr>
+            <th>File Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fileName in Model)
+        {
+            <tr>
+                <td>@fileName</td>
+                <td>
+                    <form asp-action="Delete" method="post">
+                        <input type="hidden" name="name" value="@fileName" />
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Placeholder watermark -->
+<div class="watermark"></div>
+
+<style>
+    /* Table Styling */
+    .file-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+        background-color: #f8f9fa;
+    }
+
+        .file-table th,
+        .file-table td {
+            border: 1px solid #ccc;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .file-table th {
+            background-color: #e8e5d1;
+            color: #444740;
+        }
+
+    /* Watermark */
+    .watermark {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        width: 250px;
+        height: 250px;
+        background-image: url('https://cdn3.iconfinder.com/data/icons/audit-7/512/35_Contract_Agreement_Admission_Signing_Document-1024.png'); /* Placeholder link */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.1;
+        pointer-events: none; /* Allows clicks through watermark */
+        z-index: 0;
+    }
+
+    /* Responsive */
+    @@media (max-width: 768px) {
+        .file-table, .file-table th, .file-table td
+
+    {
+        display: block;
+        width: 100%;
+    }
+
+    }
+</style>

@@ -1,0 +1,119 @@
+﻿@model List<ABCRetailStorageApp.Models.CustomerEntity>
+@{
+    Layout = "_Layout";
+}
+
+<style>
+    /* Container */
+    .customers-container {
+        position: relative;
+        min-height: 80vh;
+        padding: 2rem;
+    }
+
+        /* Heading */
+        .customers-container h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #444740;
+        }
+
+        /* Button */
+        .customers-container .create-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin-bottom: 1rem;
+            background-color: #84735e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+            .customers-container .create-btn:hover {
+                background-color: #6b5b4c;
+            }
+
+    /* Table */
+    .customers-table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+        .customers-table th,
+        .customers-table td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .customers-table th {
+            background-color: #e8e5d1;
+            color: #444740;
+            font-weight: bold;
+        }
+
+        .customers-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .customers-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .customers-table a {
+            color: #84735e;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+            .customers-table a:hover {
+                text-decoration: underline;
+            }
+
+    /* Watermark */
+    .watermark {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        opacity: 0.1;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+        .watermark img {
+            max-width: 300px;
+        }
+</style>
+
+<div class="customers-container">
+    <h2>Customers</h2>
+    <a href="@Url.Action("CreateCustomer")" class="create-btn">+ Create New Customer</a>
+
+    <table class="customers-table">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.Name</td>
+                <td>@c.Email</td>
+                <td>
+                    <a href="@Url.Action("EditCustomer", new { id = c.RowKey })">Edit</a> |
+                    <a href="@Url.Action("DeleteCustomer", new { id = c.RowKey })">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+
+    <!-- Watermark Placeholder -->
+    <div class="watermark">
+        <img src="https://cdn-icons-png.flaticon.com/256/747/747376.png" alt="Watermark" />
+    </div>
+</div>

@@ -1,0 +1,128 @@
+﻿@model ABCRetailStorageApp.Models.CustomerEntity
+@{
+    Layout = "_Layout";
+}
+
+<div class="form-container">
+    <h2>Edit Customer</h2>
+
+    <form asp-action="EditCustomer" method="post">
+        <input type="hidden" asp-for="RowKey" />
+
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-input" />
+            <span asp-validation-for="Name" class="validation-text"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-input" />
+            <span asp-validation-for="Email" class="validation-text"></span>
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="btn-save">Save</button>
+            <a asp-action="Customers" class="btn-cancel">Cancel</a>
+        </div>
+    </form>
+
+    <div class="watermark">
+        <img src="https://th.bing.com/th/id/R.7b2e90d52f2c1634b0e0e014896c4039?rik=RSmV8N8WH729aQ&pid=ImgRaw&r=0" alt="Watermark" />
+    </div>
+</div>
+
+<style>
+    .form-container {
+        position: relative;
+        max-width: 500px;
+        margin: 5rem auto 3rem auto;
+        padding: 2rem;
+        background-color: #f8f9fa;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+        .form-container h2 {
+            color: #444740;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #636453;
+            font-weight: 500;
+        }
+
+    .form-input {
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid #847c6d;
+        border-radius: 8px;
+        font-size: 1rem;
+        color: #444740;
+    }
+
+    .validation-text {
+        color: #d9534f;
+        font-size: 0.9rem;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .btn-save {
+        padding: 0.75rem 1.5rem;
+        background-color: #84735e;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .btn-save:hover {
+            background-color: #636453;
+        }
+
+    .btn-cancel {
+        padding: 0.75rem 1.5rem;
+        background-color: #e8e5d1;
+        color: #444740;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+    }
+
+        .btn-cancel:hover {
+            background-color: #dcd9c5;
+        }
+
+    /* Watermark */
+    .watermark {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        opacity: 0.1;
+        pointer-events: none;
+    }
+
+        .watermark img {
+            max-width: 300px;
+            height: auto;
+        }
+</style>
